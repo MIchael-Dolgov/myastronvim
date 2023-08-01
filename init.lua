@@ -78,6 +78,7 @@ return {
 
     -- Set options
     set.relativenumber = false
+    set.cursorline
 
     -- Set Keymaps
     map("n", "<C-o>", "<cmd>:Neotree<CR>", opts)
