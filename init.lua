@@ -69,6 +69,30 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    local opts = { noremap = true, silent = true }
+    local map = vim.api.nvim_set_keymap
+    local set = vim.opt
+
+    -- Set options
+    set.relativenumber = false
+
+    -- Set Keymaps
+    map("n", "<C-o>", "<cmd>:Neotree<CR>", opts)
+    map("n", "<C-i>", "<cmd>:Neotree close<CR>", opts)
+
+    map('n', '<C-p>', [[ <cmd>MinimapToggle<cr> ]], opts)
+    vim.g.minimap_width = 20
+    vim.g.highlight_range = 1
+    vim.g.minimap_git_colors = 1
+    vim.g.minimap_highlight_search = 1
+
+    map('n', '<C-h>', [[ <cmd>Gitsigns<cr> ]], opts)
+
+    map('n', '<F6>', [[ <cmd>AerialToggle! right<cr> ]], opts)
+
+    map('n', '<F4>', [[ <cmd>TroubleToggle<cr> ]], opts )
+    map('n', '<C-e>', [[ <cmd>TroubleRefresh<cr> ]], opts )
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
