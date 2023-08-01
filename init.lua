@@ -75,9 +75,14 @@ return {
     local opts = { noremap = true, silent = true }
     local map = vim.api.nvim_set_keymap
     local set = vim.opt
+    local cmd = vim.cmd
 
     -- Set options
     set.relativenumber = false
+    set.cursorline = true
+    set.termguicolors = true
+
+    cmd":highlight CursorLine gui=underline cterm=underline"
 
     -- Set Keymaps
     map("n", "<C-o>", "<cmd>:Neotree<CR>", opts)
