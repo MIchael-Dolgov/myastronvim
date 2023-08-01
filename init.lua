@@ -18,6 +18,9 @@ return {
   },
 
   -- Set colorscheme to use
+  --colorscheme = "kanagawa",
+  --colorscheme = "catppuccin",
+  --colorscheme = "iceberg",
   colorscheme = "astrodark",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -90,8 +93,10 @@ return {
 
     map('n', '<F6>', [[ <cmd>AerialToggle! right<cr> ]], opts)
 
-    map('n', '<F4>', [[ <cmd>TroubleToggle<cr> ]], opts )
+    map('n', '<F5>', [[ <cmd>TroubleToggle<cr> ]], opts )
     map('n', '<C-e>', [[ <cmd>TroubleRefresh<cr> ]], opts )
+
+    --multiple cursors
 
     -- Set up custom filetypes
     -- vim.filetype.add {
