@@ -82,7 +82,7 @@ return {
     set.cursorline = true
     set.termguicolors = true
 
-    cmd":highlight CursorLine gui=underline cterm=underline"
+    --cmd":highlight CursorLine gui=underline cterm=underline"
 
     -- Set Keymaps
     map("n", "<C-o>", "<cmd>:Neotree<CR>", opts)
