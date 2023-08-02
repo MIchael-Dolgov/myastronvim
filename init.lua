@@ -102,6 +102,18 @@ return {
     map('n', '<C-e>', [[ <cmd>TroubleRefresh<cr> ]], opts )
 
     --multiple cursors
+    --
+    -- popups
+    -- https://github.com/hrsh7th/nvim-cmp/issues/261
+    local cmp = require('cmp')
+    cmp.setup {
+      completion = {
+        autocomplete = false,
+      },
+      mapping = {
+        ['<C-j>'] = cmp.mapping.complete()
+      }
+    }
 
     -- Set up custom filetypes
     -- vim.filetype.add {
