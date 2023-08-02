@@ -9,6 +9,10 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  { "ray-x/lsp_signature.nvim", enabled = false },
+
+  -- TODO: create lsp inlay hint like lunarvim
+  
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },

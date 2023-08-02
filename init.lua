@@ -63,7 +63,7 @@ return {
     performance = {
       rtp = {
         -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin", },
       },
     },
   },
@@ -98,22 +98,22 @@ return {
 
     map('n', '<F6>', [[ <cmd>AerialToggle! right<cr> ]], opts)
 
-    map('n', '<F5>', [[ <cmd>TroubleToggle<cr> ]], opts )
+    map('n', '<F4>', [[ <cmd>TroubleToggle<cr> ]], opts )
     map('n', '<C-e>', [[ <cmd>TroubleRefresh<cr> ]], opts )
 
     --multiple cursors
     --
     -- popups
     -- https://github.com/hrsh7th/nvim-cmp/issues/261
-    local cmp = require('cmp')
-    cmp.setup {
-      completion = {
-        autocomplete = false,
-      },
-      mapping = {
-        ['<C-j>'] = cmp.mapping.complete()
-      }
-    }
+    --local cmp = require('cmp')
+    --cmp.setup {
+      --completion = {
+        --autocomplete = false,
+      --},
+      --mapping = {
+        --['<C-j>'] = cmp.mapping.complete()
+      --}
+    --}
 
     -- Set up custom filetypes
     -- vim.filetype.add {
