@@ -20,7 +20,6 @@ return {
   -- Set colorscheme to use
   --colorscheme = "kanagawa",
   --colorscheme = "catppuccin",
-  --colorscheme = "iceberg",
   colorscheme = "astrodark",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -82,6 +81,13 @@ return {
     set.cursorline = true
     set.termguicolors = true
 
+    vim.opt.encoding = 'UTF-8'
+    vim.opt.colorcolumn = '100' -- 80 better
+
+    vim.opt.numberwidth = 5
+    --cmd"highlight LineNr guibg=#090930"
+    --cmd"highlight LineNr guifg=#656556"
+
     --cmd":highlight CursorLine gui=underline cterm=underline"
 
     -- Set Keymaps
@@ -102,7 +108,7 @@ return {
     map('n', '<C-e>', [[ <cmd>TroubleRefresh<cr> ]], opts )
 
     --multiple cursors
-    --
+
     -- popups
     -- https://github.com/hrsh7th/nvim-cmp/issues/261
     --local cmp = require('cmp')
